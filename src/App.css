@@ -1,38 +1,203 @@
-.App {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "IndependentDayFont", Courier, monospace;
   text-align: center;
+  width: 800px;
+  height: 1000px;
+  margin: auto;
+  font-size: 85pt;
+  background: linear-gradient(to bottom right, #ffffff 0%, #999999 100%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-flag {
+  width: 500px;
+  height: 200px;
+  margin: 50px auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.flag {
+  animation: wave 1s ease-in-out infinite alternate;
+  position: relative;
+  height: 100%;
+  width: 1px;
+  display: inline-block;
+  box-shadow: 0 1px grey, 0 -1px gray;
+}
+
+.flag::before {
+  content: "";
+  display: block;
+  height: 150px;
+  background-color: red;
+}
+.flag::after {
+  content: "";
+  display: block;
+  height: 150px;
+  background-color: white;
+}
+
+h3 {
+  font-size: 50px;
+  position: relative;
+  left: -80px;
+}
+
+h1 {
+  position: relative;
+  top: -15px;
+  left: 40px;
+}
+
+h1 span {
+  font-size: 40px;
+  position: absolute;
+}
+
+h4 {
+  font-size: 30px;
+  position: relative;
+  top: -20px;
+  left: -95px;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 100px;
+  position: relative;
+  left: 220px;
+  top: -25px;
+}
+
+@keyframes wave {
+  0% {
+    top: 5%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    top: -5%;
   }
 }
